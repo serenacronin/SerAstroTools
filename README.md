@@ -1,2 +1,2 @@
 # SerAstroTools
-Collection of Python tools for astronomy!
+Collection of tools for astronomy!
