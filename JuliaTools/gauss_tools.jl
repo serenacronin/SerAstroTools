@@ -21,3 +21,11 @@ function one_gaussian(x_array, amp,cen,sigma)
     amp .* (exp.((-1.0/2.0) .* (((x_array .- cen) ./ sigma).^2.0)));
 end
 
+"""
+Function that will calculate the reduced chi square between your data and model.
+Input: observed (data), calculated (model), number of parameters, and any errors
+Output: reduced chi square, ideally ~1
+"""
+function red_chisq(obs,calc,num_params,err)
+    (sum(obs .- calc).^2 ./ err) ./ (length(obs) ./ num_params);
+end
